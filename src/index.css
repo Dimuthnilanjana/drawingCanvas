@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Nature-inspired outdoor design palette */
+    --background: 42 40% 96%;
+    --foreground: 120 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 120 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 120 30% 15%;
+
+    /* Forest green primary */
+    --primary: 120 45% 25%;
+    --primary-foreground: 0 0% 98%;
+
+    /* Sky blue secondary */
+    --secondary: 200 65% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 42 20% 92%;
+    --muted-foreground: 120 15% 45%;
+
+    /* Terracotta accent */
+    --accent: 15 65% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 120 15% 85%;
+    --input: 120 15% 90%;
+    --ring: 120 45% 25%;
+
+    --radius: 0.75rem;
+
+    /* Canvas colors */
+    --canvas-bg: 95 25% 94%;
+    --canvas-grid: 120 15% 85%;
+    
+    /* Toolbar */
+    --toolbar-bg: 0 0% 100%;
+    --toolbar-shadow: 120 20% 20% / 0.1;
+
+    /* Design system tokens */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow-soft: 0 4px 12px hsl(var(--toolbar-shadow));
+    --shadow-medium: 0 8px 24px hsl(var(--toolbar-shadow));
+  }
+
+  .dark {
+    --background: 120 20% 10%;
+    --foreground: 95 25% 94%;
+
+    --card: 120 15% 15%;
+    --card-foreground: 95 25% 94%;
+
+    --popover: 120 15% 15%;
+    --popover-foreground: 95 25% 94%;
+
+    --primary: 120 45% 35%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 200 55% 45%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 120 10% 20%;
+    --muted-foreground: 120 10% 60%;
+
+    --accent: 15 65% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 120 10% 25%;
+    --input: 120 10% 25%;
+    --ring: 120 45% 35%;
+    
+    --canvas-bg: 120 15% 12%;
+    --canvas-grid: 120 10% 20%;
+    
+    --toolbar-bg: 120 15% 15%;
+    --toolbar-shadow: 0 0% 0% / 0.3;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
